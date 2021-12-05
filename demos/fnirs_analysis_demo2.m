@@ -145,13 +145,13 @@ job = nirs.modules.MixedEffects();
 job.formula='beta ~ -1 + cond';  % using random effects will work, but will take a while to run
                                 % let's use the fixed effects only modle
                                 
- GroupStats=job.run(SubjStats);
+GroupStats=job.run(SubjStats);
   
- HRF = GroupStats.HRF;  % the "HRF" command will return the time series from the stats variable.  This also works for 
+HRF = GroupStats.HRF;  % the "HRF" command will return the time series from the stats variable.  This also works for 
                         % all the other canonical models (although
                         % obviously a canonical model will have a trivial
                         % shape)
- nirs.viz.plot2D(HRF);  % this will plot overlain on the probe layout
+nirs.viz.plot2D(HRF);  % this will plot overlain on the probe layout
  
  
  % to draw contrast, you need to specify a time-window
